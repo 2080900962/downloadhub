@@ -1,0 +1,256 @@
+[
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "category": "ai-tools",
+    "description": "AI代码编辑器，集成GPT-4",
+    "version": "0.42.3",
+    "official_url": "https://cursor.sh/",
+    "logo": "⚡",
+    "platforms": {
+      "windows": "https://downloader.cursor.sh/builds/250101w5w8zzqto/windows/nsis/x64",
+      "mac": "https://downloader.cursor.sh/builds/250101w5w8zzqto/darwin/universal",
+      "linux": "https://downloader.cursor.sh/builds/250101w5w8zzqto/linux/appImage/x64"
+    },
+    "mirrors": [],
+    "tags": ["AI", "编辑器", "开发工具"],
+    "tutorial": "1. 下载安装包\n2. 双击运行安装\n3. 首次启动输入API Key",
+    "faq": [
+      {"q": "如何配置API Key？", "a": "Settings → Features → API Key"},
+      {"q": "支持哪些AI模型？", "a": "GPT-4, Claude, 本地模型"}
+    ],
+    "featured": true,
+    "updated": "2026-05-20"
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "category": "ai-tools",
+    "description": "本地运行大语言模型",
+    "version": "0.5.4",
+    "official_url": "https://ollama.com/",
+    "logo": "🦙",
+    "downloads": "1.8M",
+    "trending": true,
+    "platforms": {
+      "windows": "https://ollama.com/download/OllamaSetup.exe",
+      "mac": "https://ollama.com/download/Ollama-darwin.zip",
+      "linux": "https://ollama.com/download/ollama-linux-amd64"
+    },
+    "mirrors": ["https://mirrors.tuna.tsinghua.edu.cn/ollama/"],
+    "tags": ["AI", "LLM", "本地部署"],
+    "tutorial": "1. 安装Ollama\n2. 命令行运行: ollama run llama3\n3. 访问 http://localhost:11434",
+    "faq": [
+      {"q": "支持哪些模型？", "a": "Llama3, Mistral, Gemma等30+模型"},
+      {"q": "需要什么配置？", "a": "建议16GB内存，支持GPU加速"}
+    ],
+    "featured": true,
+    "updated": "2026-05-18"
+  },
+  {
+    "id": "comfyui",
+    "name": "ComfyUI",
+    "category": "creator-tools",
+    "description": "节点式AI绘画工具",
+    "version": "0.2.8",
+    "official_url": "https://github.com/comfyanonymous/ComfyUI",
+    "logo": "🎨",
+    "downloads": "856K",
+    "trending": true,
+    "platforms": {
+      "windows": "https://github.com/comfyanonymous/ComfyUI/releases/download/latest/ComfyUI_windows_portable.zip",
+      "mac": "https://github.com/comfyanonymous/ComfyUI/archive/refs/heads/master.zip",
+      "linux": "https://github.com/comfyanonymous/ComfyUI/archive/refs/heads/master.zip"
+    },
+    "mirrors": ["https://gh.idayer.com/https://github.com/comfyanonymous/ComfyUI/releases"],
+    "tags": ["AI绘画", "Stable Diffusion", "创作工具"],
+    "tutorial": "1. 解压到任意目录\n2. 双击 run_nvidia_gpu.bat\n3. 浏览器打开 127.0.0.1:8188",
+    "faq": [
+      {"q": "需要什么显卡？", "a": "建议NVIDIA 6GB+显存"},
+      {"q": "如何安装模型？", "a": "放到 models/checkpoints 目录"}
+    ],
+    "featured": true,
+    "updated": "2026-05-22"
+  },
+  {
+    "id": "blender",
+    "name": "Blender",
+    "category": "creator-tools",
+    "description": "开源3D创作套件",
+    "version": "4.3.2",
+    "official_url": "https://www.blender.org/",
+    "logo": "🔷",
+    "platforms": {
+      "windows": "https://www.blender.org/download/release/Blender4.3/blender-4.3.2-windows-x64.msi/",
+      "mac": "https://www.blender.org/download/release/Blender4.3/blender-4.3.2-macos-arm64.dmg/",
+      "linux": "https://www.blender.org/download/release/Blender4.3/blender-4.3.2-linux-x64.tar.xz/"
+    },
+    "mirrors": ["https://mirrors.tuna.tsinghua.edu.cn/blender/"],
+    "tags": ["3D", "建模", "开源"],
+    "tutorial": "1. 下载安装包\n2. 运行安装程序\n3. 首次启动选择界面语言",
+    "faq": [
+      {"q": "新手如何入门？", "a": "官方提供免费教程和文档"},
+      {"q": "支持哪些格式？", "a": "FBX, OBJ, GLTF等主流格式"}
+    ],
+    "featured": false,
+    "updated": "2026-05-15"
+  },
+  {
+    "id": "obs",
+    "name": "OBS Studio",
+    "category": "creator-tools",
+    "description": "开源直播录屏软件",
+    "version": "31.0.0",
+    "official_url": "https://obsproject.com/",
+    "logo": "🎥",
+    "platforms": {
+      "windows": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-31.0.0-Windows.zip",
+      "mac": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-31.0.0-macOS.dmg",
+      "linux": "https://flathub.org/apps/com.obsproject.Studio"
+    },
+    "mirrors": [],
+    "tags": ["直播", "录屏", "开源"],
+    "tutorial": "1. 安装OBS\n2. 添加场景和来源\n3. 设置推流地址开始直播",
+    "faq": [
+      {"q": "如何降低CPU占用？", "a": "使用硬件编码(NVENC/AMF)"},
+      {"q": "支持哪些平台？", "a": "B站、抖音、YouTube等"}
+    ],
+    "featured": false,
+    "updated": "2026-05-10"
+  },
+  {
+    "id": "docker",
+    "name": "Docker Desktop",
+    "category": "dev-tools",
+    "description": "容器化应用平台",
+    "version": "4.36.0",
+    "official_url": "https://www.docker.com/",
+    "logo": "🐳",
+    "platforms": {
+      "windows": "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe",
+      "mac": "https://desktop.docker.com/mac/main/amd64/Docker.dmg"
+    },
+    "mirrors": ["https://mirrors.tuna.tsinghua.edu.cn/docker-ce/"],
+    "tags": ["容器", "开发工具", "DevOps"],
+    "tutorial": "1. 安装Docker Desktop\n2. 启动后配置镜像加速\n3. 命令行运行: docker run hello-world",
+    "faq": [
+      {"q": "如何配置镜像加速？", "a": "Settings → Docker Engine 添加registry-mirrors"},
+      {"q": "WSL2是什么？", "a": "Windows下推荐的Docker后端"}
+    ],
+    "featured": false,
+    "updated": "2026-05-12"
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "category": "dev-tools",
+    "description": "Python编程语言",
+    "version": "3.12.8",
+    "official_url": "https://www.python.org/",
+    "logo": "🐍",
+    "platforms": {
+      "windows": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe",
+      "mac": "https://www.python.org/ftp/python/3.12.8/python-3.12.8-macos11.pkg",
+      "linux": "https://www.python.org/ftp/python/3.12.8/Python-3.12.8.tgz"
+    },
+    "mirrors": ["https://npmmirror.com/mirrors/python/", "https://mirrors.tuna.tsinghua.edu.cn/python/"],
+    "tags": ["编程语言", "开发工具"],
+    "tutorial": "1. 下载安装包\n2. 勾选 Add to PATH\n3. 命令行验证: python --version",
+    "faq": [
+      {"q": "pip如何换源？", "a": "pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple"},
+      {"q": "虚拟环境怎么用？", "a": "python -m venv venv"}
+    ],
+    "featured": false,
+    "updated": "2026-05-08"
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "category": "dev-tools",
+    "description": "JavaScript运行时",
+    "version": "22.12.0",
+    "official_url": "https://nodejs.org/",
+    "logo": "💚",
+    "platforms": {
+      "windows": "https://nodejs.org/dist/v22.12.0/node-v22.12.0-x64.msi",
+      "mac": "https://nodejs.org/dist/v22.12.0/node-v22.12.0.pkg",
+      "linux": "https://nodejs.org/dist/v22.12.0/node-v22.12.0-linux-x64.tar.xz"
+    },
+    "mirrors": ["https://npmmirror.com/mirrors/node/", "https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/"],
+    "tags": ["JavaScript", "运行时", "开发工具"],
+    "tutorial": "1. 下载安装包\n2. 运行安装程序\n3. 验证: node -v && npm -v",
+    "faq": [
+      {"q": "npm如何换源？", "a": "npm config set registry https://registry.npmmirror.com"},
+      {"q": "推荐使用nvm吗？", "a": "是的，方便管理多版本"}
+    ],
+    "featured": false,
+    "updated": "2026-05-05"
+  },
+  {
+    "id": "vscode",
+    "name": "VS Code",
+    "category": "dev-tools",
+    "description": "微软开源代码编辑器",
+    "version": "1.96.2",
+    "official_url": "https://code.visualstudio.com/",
+    "logo": "📘",
+    "platforms": {
+      "windows": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
+      "mac": "https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal",
+      "linux": "https://code.visualstudio.com/sha/download?build=stable&os=linux-x64"
+    },
+    "mirrors": ["https://mirrors.tuna.tsinghua.edu.cn/github-release/microsoft/vscode/"],
+    "tags": ["编辑器", "开发工具", "微软"],
+    "tutorial": "1. 下载安装包\n2. 安装时勾选添加到PATH\n3. 安装推荐插件",
+    "faq": [
+      {"q": "如何同步设置？", "a": "登录GitHub账号自动同步"},
+      {"q": "推荐哪些插件？", "a": "Prettier, ESLint, GitLens"}
+    ],
+    "featured": false,
+    "updated": "2026-05-03"
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "category": "dev-tools",
+    "description": "分布式版本控制系统",
+    "version": "2.48.1",
+    "official_url": "https://git-scm.com/",
+    "logo": "🔀",
+    "platforms": {
+      "windows": "https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe",
+      "mac": "https://sourceforge.net/projects/git-osx-installer/files/git-2.48.1-intel-universal-mavericks.dmg/download",
+      "linux": "https://mirrors.edge.kernel.org/pub/software/scm/git/"
+    },
+    "mirrors": ["https://npmmirror.com/mirrors/git-for-windows/", "https://mirrors.tuna.tsinghua.edu.cn/github-release/git-for-windows/git/"],
+    "tags": ["版本控制", "开发工具", "Git"],
+    "tutorial": "1. 下载安装包\n2. 安装时选择默认编辑器\n3. 配置用户信息: git config --global user.name",
+    "faq": [
+      {"q": "如何生成SSH密钥？", "a": "ssh-keygen -t ed25519 -C 'email'"},
+      {"q": "推荐GUI工具？", "a": "GitHub Desktop, SourceTree"}
+    ],
+    "featured": false,
+    "updated": "2026-05-01"
+  },
+  {
+    "id": "raycast",
+    "name": "Raycast",
+    "category": "system-tools",
+    "description": "Mac效率启动器",
+    "version": "1.87.3",
+    "official_url": "https://www.raycast.com/",
+    "logo": "🚀",
+    "platforms": {
+      "mac": "https://api.raycast.com/v1/download"
+    },
+    "mirrors": [],
+    "tags": ["效率工具", "Mac", "启动器"],
+    "tutorial": "1. 下载安装Raycast\n2. 设置快捷键(推荐Cmd+Space)\n3. 安装扩展插件",
+    "faq": [
+      {"q": "如何替换Spotlight？", "a": "系统设置中修改快捷键"},
+      {"q": "有哪些好用插件？", "a": "Clipboard History, Window Management"}
+    ],
+    "featured": false,
+    "updated": "2026-04-28"
+  }
+]

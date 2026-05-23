@@ -12,9 +12,9 @@ class SearchService:
         self.max_results = config.SEARCH_MAX_RESULTS
         self.mirrors = {
             'github.com': [
-                'https://ghproxy.com/',
-                'https://mirror.ghproxy.com/',
-                'https://gh.api.99988866.xyz/'
+                'https://gh.idayer.com/',
+                'https://gh.ddlc.top/',
+                'https://gh.llkk.cc/'
             ],
             'nodejs.org': [
                 'https://npmmirror.com/mirrors/node/',
@@ -53,7 +53,7 @@ class SearchService:
         for domain, mirrors in self.mirrors.items():
             if domain in url:
                 for mirror in mirrors:
-                    if 'ghproxy' in mirror:
+                    if domain == 'github.com':
                         alternatives.append(mirror + url)
                     else:
                         alternatives.append(mirror + path.lstrip('/'))

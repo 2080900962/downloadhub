@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ software.name }} - DownloadHub</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/software.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">DownloadHub</span>
+            </div>
+            <div class="nav-links">
+                <a href="/">测速工具</a>
+                <a href="/software">软件库</a>
+                <a href="/about">关于</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="detail-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/software">← 返回软件库</a>
+            </div>
+            <div class="detail-header">
+                <div class="header-left">
+                    <span class="logo-large">{{ software.logo }}</span>
+                    <div>
+                        <h1>{{ software.name }}</h1>
+                        <p class="description">{{ software.description }}</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <span class="version-badge">v{{ software.version }}</span>
+                    {% if software.downloads %}
+                    <span class="stat">↓ {{ software.downloads }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="tags-row">
+                {% for tag in software.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container detail-content">
+
+        <div class="platforms">
+            <h2>📥 下载</h2>
+            {% for platform, url in software.platforms.items() %}
+            <div class="platform-item">
+                <div class="platform-name">
+                    {% if platform == 'windows' %}🪟 Windows
+                    {% elif platform == 'mac' %}🍎 macOS
+                    {% elif platform == 'linux' %}🐧 Linux
+                    {% endif %}
+                </div>
+                <button class="download-btn" onclick="testAndDownload('{{ url }}', '{{ software.mirrors|tojson }}')">
+                    下载
+                </button>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="mirrors">
+            <h2>🌐 国内镜像</h2>
+            <div id="mirrorResults"></div>
+        </div>
+
+        <div class="info-section">
+            <h2>📖 安装教程</h2>
+            <pre style="white-space:pre-wrap;background:#f3f4f6;padding:1rem;border-radius:8px">{{ software.tutorial }}</pre>
+        </div>
+
+        <div class="info-section">
+            <h2>❓ 常见问题</h2>
+            {% for item in software.faq %}
+            <div style="margin-bottom:1rem">
+                <strong>Q: {{ item.q }}</strong>
+                <p style="color:#6b7280;margin:0.5rem 0 0 0">A: {{ item.a }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="info-section">
+            <h2>ℹ️ 官方信息</h2>
+            <p><a href="{{ software.official_url }}" target="_blank">{{ software.official_url }}</a></p>
+        </div>
+    </div>
+
+    <script>
+        const softwareData = {{ software|tojson }};
+    </script>
+    <script src="/static/js/software_detail.js"></script>
+</body>
+</html>

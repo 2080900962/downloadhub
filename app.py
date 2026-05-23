@@ -5,8 +5,13 @@ from urllib.parse import urlparse, unquote, quote
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 from collections import OrderedDict
+import os
 
-app = Flask(__name__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+app = Flask(__name__,
+            template_folder=os.path.join(BASE_DIR, 'frontend', 'templates'),
+            static_folder=os.path.join(BASE_DIR, 'frontend', 'static'))
 
 def extract_filename(url):
     path = urlparse(url).path
@@ -23,9 +28,9 @@ def search_alternatives(filename, original_url):
 
     mirror_sites = {
         'github.com': [
-            'https://ghproxy.com/',
-            'https://mirror.ghproxy.com/',
-            'https://gh.api.99988866.xyz/'
+            'https://gh.idayer.com/',
+            'https://gh.ddlc.top/',
+            'https://gh.llkk.cc/'
         ],
         'nodejs.org': [
             'https://npmmirror.com/mirrors/node/',
@@ -40,7 +45,7 @@ def search_alternatives(filename, original_url):
     for domain, mirrors in mirror_sites.items():
         if domain in original_url:
             for mirror in mirrors:
-                if 'ghproxy' in mirror:
+                if domain == 'github.com':
                     alternatives.append(mirror + original_url)
                 else:
                     alternatives.append(mirror + path.lstrip('/'))
@@ -111,6 +116,26 @@ def test_speed(url):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/software')
+def software():
+    return render_template('software.html')
+
+@app.route('/software/<software_id>')
+def software_detail(software_id):
+    import json
+    with open(os.path.join(BASE_DIR, 'data', 'software.json')) as f:
+        software_list = json.load(f)
+    software = next((s for s in software_list if s['id'] == software_id), None)
+    if not software:
+        return "Software not found", 404
+    return render_template('software_detail.html', software=software)
+
+@app.route('/api/software')
+def api_software():
+    import json
+    with open(os.path.join(BASE_DIR, 'data', 'software.json')) as f:
+        return jsonify(json.load(f))
 
 @app.route('/api/search', methods=['POST'])
 def search():

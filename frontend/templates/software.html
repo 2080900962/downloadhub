@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>软件库 - DownloadHub</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/software.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">DownloadHub</span>
+            </div>
+            <div class="nav-links">
+                <a href="/">测速工具</a>
+                <a href="/software">软件库</a>
+                <a href="/about">关于</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="hero">
+            <h1>📦 软件库</h1>
+            <p class="subtitle">精选开发工具，一键下载最快源</p>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="搜索软件名、标签或分类...">
+        </div>
+
+        <div class="categories">
+            <button class="cat-btn active" data-cat="all">全部</button>
+            <button class="cat-btn" data-cat="ai-tools">AI工具</button>
+            <button class="cat-btn" data-cat="dev-tools">开发工具</button>
+            <button class="cat-btn" data-cat="creator-tools">创作者工具</button>
+            <button class="cat-btn" data-cat="system-tools">系统工具</button>
+        </div>
+
+        <div class="software-grid" id="softwareGrid"></div>
+    </div>
+
+    <script src="/static/js/software.js"></script>
+</body>
+</html>

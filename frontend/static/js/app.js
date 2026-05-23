@@ -107,6 +107,35 @@ document.getElementById('urlInput').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') startSearch('head');
 });
 
+async function loadFeaturedSoftware() {
+    try {
+        const res = await fetch('/api/software');
+        const software = await res.json();
+        const featured = software.filter(s => s.featured);
+
+        document.getElementById('featuredSoftware').innerHTML = featured.map(s => `
+            <div class="software-card" onclick="location.href='/software/${s.id}'">
+                <div class="card-header">
+                    <span class="logo">${s.logo}</span>
+                    ${s.trending ? '<span class="trending-badge">🔥 热门</span>' : ''}
+                </div>
+                <h3>${s.name}</h3>
+                <p class="version">v${s.version}</p>
+                <p class="description">${s.description}</p>
+                <div class="card-footer">
+                    <div class="tags">
+                        ${s.tags.slice(0, 2).map(t => `<span class="tag">${t}</span>`).join('')}
+                    </div>
+                    ${s.downloads ? `<span class="downloads">↓ ${s.downloads}</span>` : ''}
+                </div>
+            </div>
+        `).join('');
+    } catch (e) {
+        console.error('Failed to load software:', e);
+    }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('emptyState').style.display = 'block';
+    loadFeaturedSoftware();
 });
