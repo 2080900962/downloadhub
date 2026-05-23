@@ -1,0 +1,50 @@
+[
+  {
+    "success": true,
+    "time": 3.500257968902588,
+    "sources": 6,
+    "url": "https://nodejs.org/dist/v20.0.0/node-v20.0.0-win-x64.zip"
+  },
+  {
+    "success": true,
+    "time": 12.099409341812134,
+    "sources": 7,
+    "url": "https://github.com/git/git/archive/refs/tags/v2.40.0.zip"
+  },
+  {
+    "success": true,
+    "time": 2.5962376594543457,
+    "sources": 4,
+    "url": "https://dl.google.com/chrome/install/latest/chrome_installer.exe"
+  },
+  {
+    "success": true,
+    "time": 2.708064317703247,
+    "sources": 3,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2023.03-Windows-x86_64.exe"
+  },
+  {
+    "success": true,
+    "time": 3.3648276329040527,
+    "sources": 6,
+    "url": "https://download.pytorch.org/whl/torch-2.0.0-cp310-cp310-win_amd64.whl"
+  },
+  {
+    "success": true,
+    "time": 2.583251714706421,
+    "sources": 4,
+    "url": "https://invalid-url-test-404.com/file.zip"
+  },
+  {
+    "success": true,
+    "time": 5.259523391723633,
+    "sources": 4,
+    "url": "https://httpstat.us/500"
+  },
+  {
+    "success": true,
+    "time": 3.3927977085113525,
+    "sources": 4,
+    "url": "https://httpstat.us/timeout?sleep=10000"
+  }
+]
